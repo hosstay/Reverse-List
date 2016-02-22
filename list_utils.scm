@@ -19,7 +19,7 @@
    (if (null? lst)
       '()
       (begin
-         (if atom? (car lst))
+         (if atom? (car lst)
             (append (rev-all-list (cdr lst)) (list (car lst)))
             (append (rev-all-list (cdr lst)) (list (rev-all-list (car lst))))
          )
