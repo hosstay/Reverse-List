@@ -41,11 +41,9 @@
       '()
       (begin
          (if (atom? (car lst))
-            (begin
-               (if (equal? (car lst) itm)
-                  (del-from-list itm (cdr lst))
-                  (append (list (car lst)) (del-from-list itm (cdr lst)))
-               )
+            (if (equal? (car lst) itm)
+               (del-from-list itm (cdr lst))
+               (append (list (car lst)) (del-from-list itm (cdr lst)))
             )
             (append (list (del-from-list itm (car lst)))
                     (del-from-list itm (cdr lst)))
