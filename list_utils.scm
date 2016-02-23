@@ -3,6 +3,12 @@
 (define b '(3 (23 8 (44 5 3) 4 5) 32 3 (2 3)))
 
 
+;atom? function
+
+(define (atom? x)
+(and (not (pair? x)) (not (null? x))))
+
+
 ;rev-list
 
 (define (rev-list lst)
